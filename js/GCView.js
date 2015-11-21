@@ -11,6 +11,7 @@ var GCView = function(container) {
 	this.controls;
 	this.scene;
 	this.renderer;
+
 	this.lastLine = {x:null,y:null,z:null,e:null,f:null};
 	this.relative = false;
 	this.bbbox = {
@@ -59,6 +60,9 @@ var GCView = function(container) {
 	// set renderer options
 	this.renderer.setClearColor( 0x000000 );
 	this.renderer.setSize(this.containerWidth,this.containerHeight);
+
+	// remove any existing data from container div
+	this.container.innerHTML = '';
 
 	// add the renderer to the container div
 	this.container.appendChild( this.renderer.domElement );
