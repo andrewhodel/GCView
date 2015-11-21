@@ -40,7 +40,7 @@ var GCView = function(container) {
 	this.camera = new THREE.PerspectiveCamera( 70, this.containerWidth / this.containerHeight, 1, 1000 );
 
 	// add mouse pan tilt and zoom
-	this.controls = new THREE.TrackballControls( this.camera );
+	this.controls = new THREE.TrackballControls( this.camera, this.container );
 	this.controls.rotateSpeed = 7;
 	this.controls.zoomSpeed = .1;
 
